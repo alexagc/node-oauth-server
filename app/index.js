@@ -3,6 +3,7 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
+const encrypt = require('./encrypt');
 
 const app = express();
 
@@ -54,8 +55,11 @@ app.post('/login',
   }));
 
 app.get('/success', passport.authenticationMiddleware(), (req, res) => {
-  console.log(req.session);
-  res.status(200).send('loggin in');
+  res.status(200).send(JSON.stringify({
+    username: req.user.username,
+    id: req.user.username,
+    password: encrypt.encrypt(req.user.password)
+  }));
 });
 
 module.exports = app;
