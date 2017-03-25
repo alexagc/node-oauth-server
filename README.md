@@ -1,7 +1,10 @@
 From source of project exec:
 
-**npm i**(Install dependencies)
-**npm start**(Begin app)
+Install dependencies:
+`npm i`
+
+Begin app
+`npm start`
 
 For this app is needed a redis, you can use one from docker using this command
 
