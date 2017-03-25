@@ -4,7 +4,7 @@ function authenticationMiddleware() {
       return next();
     }
     res.redirect('/');
-  }
+  };
 }
 
 module.exports = authenticationMiddleware;

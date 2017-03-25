@@ -34,7 +34,7 @@ function initPassport() {
           return done(err);
         }
         if (!user) {
-          return done(null, false)
+          return done(null, false);
         }
         if (password !== user.password) {
           return done(null, false);
