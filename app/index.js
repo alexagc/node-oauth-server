@@ -62,4 +62,14 @@ app.get('/success', passport.authenticationMiddleware(), (req, res) => {
   }));
 });
 
+app.get('/error', (req, res) => {
+  res.status(200).send('Make a mistake');
+});
+
+app.get('/logout', passport.authenticationMiddleware(), (req, res) => {
+  req.session.destroy((err) => {
+    res.redirect('/');
+  });
+});
+
 module.exports = app;
