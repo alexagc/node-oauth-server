@@ -1,0 +1,27 @@
+{
+  "name": "node-oauth-server",
+  "version": "1.0.0",
+  "description": "Simpli nodeJs oauth server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexagc/node-oauth-server.git"
+  },
+  "author": "Alejandro Gomez Canal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexagc/node-oauth-server/issues"
+  },
+  "homepage": "https://github.com/alexagc/node-oauth-server#readme",
+  "dependencies": {
+    "connect-redis": "^3.2.0",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}
